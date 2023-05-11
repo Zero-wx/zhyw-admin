@@ -1,9 +1,0 @@
-spring:
-  datasource:
-    url: jdbc:mysql://localhost:13306/zhyw_by?useUnicode=true&characterEncoding=UTF8&useSSL=false
-    username: root 
-    password: root
-    driver-class-name: com.mysql.jdbc.Driver
-mybatis-plus:
-  configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
