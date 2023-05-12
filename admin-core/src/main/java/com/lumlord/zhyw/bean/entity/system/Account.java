@@ -1,4 +1,4 @@
-package com.lumlord.zhyw.bean.entity;
+package com.lumlord.zhyw.bean.entity.system;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;

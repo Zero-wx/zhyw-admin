@@ -1,9 +1,10 @@
 package com.lumlord.zhyw;
 
 import com.lumlord.zhyw.api.ApiApplication;
-import com.lumlord.zhyw.bean.entity.Account;
+import com.lumlord.zhyw.bean.entity.system.Account;
+import com.lumlord.zhyw.bean.entity.system.User;
 import com.lumlord.zhyw.service.AccountService;
-import com.lumlord.zhyw.service.Impl.AccountServiceImpl;
+import com.lumlord.zhyw.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -22,15 +23,19 @@ import java.util.List;
 public class ApiApplicationTest {
 
     @Autowired
-    private AccountService accountService;
+    private UserService userService;
 
 
     @Test
     public void sqlTest() {
-        System.out.println("数据库连接测试");
+        User user = new User();
+        user.setUsername("admin");
+        user.setPassword("admin");
+        user.setMobilePhone("15151515151");
 
-        List<Account> list = accountService.list();
 
-        System.out.println(list);
+        userService.save(user);
+
+        User one = userService.getOne(null);
     }
 }
