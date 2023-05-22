@@ -19,8 +19,10 @@ import java.util.Date;
 @Data
 @JsonIgnoreProperties
 public abstract class BaseEntity implements Serializable {
-    @TableId(type = IdType.ASSIGN_ID)
-    private Integer id;
+    // 自动填充公共字段bug
+    @TableId(value = "id", type = IdType.AUTO)
+    private Long id;
+
     @TableField(fill = FieldFill.INSERT)
     private Date createTime;
     @TableField(fill = FieldFill.INSERT)

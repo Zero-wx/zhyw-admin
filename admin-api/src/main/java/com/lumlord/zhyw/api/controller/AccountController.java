@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 import static org.apache.shiro.web.filter.mgt.DefaultFilter.user;
 
 /**
@@ -38,18 +40,11 @@ public class AccountController {
 //        if (user == null) return Result.failure("用户不存在");
 
 
-        User user = new User();
-        user.setUsername("admin");
-        user.setPassword("admin");
-        user.setMobilePhone("15151515151");
 
 
-        User one = userService.getOne(null);
-
-        boolean save = userService.save(user);
 
 
-        return Result.success(DefaultFilter.user);
+        return Result.success(list);
 
     }
 }

@@ -14,16 +14,13 @@ import java.util.Date;
  */
 @Data
 @TableName("t_user")
-public class User {
-    // 自动填充公共字段bug
-    @TableId(value = "id", type = IdType.AUTO)
-    private Long id;
+public class User extends BaseEntity{
 
-    private Date createTime;
+//    private Date createTime;
 
     private Integer createBy;
 
-    private Date modifyTime;
+//    private Date modifyTime;
 
     private Integer modifyBy;
 

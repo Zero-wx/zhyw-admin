@@ -36,6 +36,9 @@ public class ApiApplicationTest {
 
         userService.save(user);
 
-        User one = userService.getOne(null);
+        List<User> list = userService.list();
+        System.out.println(list);
+
+//        User one = userService.getOne(null);
     }
 }
